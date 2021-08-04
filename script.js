@@ -1,14 +1,16 @@
+var showLoc = document.querySelector("#showLoc")
+var 
 geo = navigator.geolocation
 
 
 
-///This allows the app to watch the current positon and refresh after movement 
-const watchID = navigator.geolocation.watchPosition((position) => {
-    doSomething(position.coords.latitude, position.coords.longitude);
-  });
+function getFood() {
+  console.log(Food)
+}
+
 
 ///this is the location finder for the app
-  function geoFindMe() {
+ function showMyLoc() {
 
     const status = document.querySelector('#status');
     const mapLink = document.querySelector('#map-link');
@@ -19,6 +21,7 @@ const watchID = navigator.geolocation.watchPosition((position) => {
     function success(position) {
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
+      console.log(longitude);
   
       status.textContent = '';
       mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
@@ -38,5 +41,6 @@ const watchID = navigator.geolocation.watchPosition((position) => {
   
   }
   
-  document.querySelector('#find-me').addEventListener('click', geoFindMe);
+  document.querySelector('#find-me').addEventListener('click', showMyLoc);
+
   

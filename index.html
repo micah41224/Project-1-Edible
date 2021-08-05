@@ -37,13 +37,16 @@
 
 <main>
   <!-- Search bar  -->
+
     
         <div id = left>
             <section>
                 <h4>Where do you go?</h4>
                 <input type= text id = area name= area placeholder="Enter City or ZipCode">
                 <button id= "submitArea" class = "btn"><span class= "bi bi-search"></span>Search</button>
-                <button class= btn id =location>Where am I?</button>
+                <button class= "btn" id ="find-me">Where am I?</button>
+                    <p id = "status"></p>
+                    <a id = "map-link" target="_blank"></a>
             
             </section>
             <ul>
@@ -61,7 +64,7 @@
             <!-- Map (google api) -->
             <section>
                 <h2>Edible Foods</h2>
-                <img src = "Map.jpg" alt ="map"
+                <img src = "Map.jpg" alt ="map">
             </section>
 
             <!-- Top Results -->
@@ -105,12 +108,12 @@
 
 
     </main>
-
-    </body>
     <footer>
 
     </footer>
+    </body>
+    
 
-    <script src=""></script>
+    <script src="./script.js"></script>
 
 </html>

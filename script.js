@@ -16,7 +16,7 @@ function initMap() {
   service = new google.maps.places.PlacesService(map);
   service.findPlaceFromQuery(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-      for (let  i = 0; i < results.length; i++) {
+      for (let i = 0; i < results.length; i++) {
         createMarker(results[i]);
       }
       map.setCenter(results[0].geometry.location);
@@ -62,3 +62,4 @@ function showMyLoc() {
 }
 
 document.querySelector('#find-me').addEventListener('click', showMyLoc);
+var userinput = document.querySelector("#area");

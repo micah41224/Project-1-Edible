@@ -44,3 +44,9 @@ function getFood() {
   document.querySelector('#find-me').addEventListener('click', showMyLoc);
 
   
+
+
+
+var userInput = document.querySelector("#area");
+
+  iframe.src.textContent = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAHXkB1ZGsu6wrnXWJ7nFPjel9MDTbh1z4&q="+userInput

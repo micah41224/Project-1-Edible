@@ -38,7 +38,7 @@ nav{
     padding-left: 100px;
     padding-right: 100px;
 }
-.menu{
+.menu {
     display: flex;
     justify-content: space-evenly;
 
@@ -83,4 +83,8 @@ img {
 }
 #topResults{ 
     display: flex;
+}
+
+#map {
+    height: 500px;
 }

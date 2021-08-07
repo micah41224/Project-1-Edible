@@ -1,17 +1,65 @@
 let map;
 let service;
 let infowindow;
+var selectState = document.querySelector("#selectState");
+var selectCampGround = document.querySelector("#selectCampGround");
 
-function initMap() {
-  const atlanta = new google.maps.LatLng(33.7490, 84.3880);
+selectState.addEventListener("change", fetchCampGrounds);
+
+function fetchCampGrounds() {
+  var selectStateValue = selectState.value
+  console.log(selectStateValue);
+ 
+fetch ("https://developer.nps.gov/api/v1/campgrounds?parkCode=GA&parkCode=GA&stateCode="+selectStateValue+"&limit=10&start=1&api_key=pFVYhxDAvLr1f1KWRD4Vas6nDZ8aoGJf4fm7R8SD")
+  .then(function (response){
+    console.log(response);
+    return response.json()
+  }) .then (function (data){
+    console.log(data);
+    var select = document.createElement("select");
+    data.data.forEach(function(item){
+    var option = document.createElement("option");
+    option.textContent= item.name
+   // var lat= item.LatLng.lat
+   // var long= item.LatLng.lng
+   console.log(item.latLong);
+    option.setAttribute("value", JSON.stringify({
+      lat:item.latitude, long:item.longitude
+    }));
+    select.appendChild(option)
+    })
+    select.addEventListener("change", function (evt){
+      handleChooseCampGround(evt.target.value);
+    })
+    selectCampGround.innerHTML = "";
+    selectCampGround.appendChild(select);
+  })
+}
+
+function handleChooseCampGround(value) {
+console.log(value);
+console.log(map);
+var latLong =JSON.parse(value);
+console.log(latLong);
+var lat= latLong.lat
+var long= latLong.long
+console.log(lat);
+console.log(long);
+initMap(lat, long);
+}
+
+function initMap(lat, long) {
+  if (!lat || !long) {return}
+  const parks = new google.maps.LatLng(lat, long);
   infowindow = new google.maps.InfoWindow();
   map = new google.maps.Map(document.getElementById("map"), {
-    center: atlanta,
+    center: parks,
     zoom: 15,
   });
-  const request = {
-    query: "Downtown ATL",
-    fields: ["name", "geometry"],
+  /*const request = {
+    location: parks,
+    //query: "Downtown ATL",
+    //fields: ["name", "geometry"],
   };
   service = new google.maps.places.PlacesService(map);
   service.findPlaceFromQuery(request, (results, status) => {
@@ -21,7 +69,7 @@ function initMap() {
       }
       map.setCenter(results[0].geometry.location);
     }
-  });
+  }); */
 }
 
 function createMarker(place) {
@@ -36,6 +84,7 @@ function createMarker(place) {
   });
 }
 
+/*
 //this is the location finder for the app
 function showMyLoc() {
   const status = document.querySelector('#status');
@@ -63,3 +112,4 @@ function showMyLoc() {
 
 document.querySelector('#find-me').addEventListener('click', showMyLoc);
 var userinput = document.querySelector("#area");
+*/

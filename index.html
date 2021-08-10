@@ -14,7 +14,9 @@
 <body>
     
     <header>
-        <nav>
+
+        <h1 id= headerH1>Edible Trails</h1>
+        <!-- <nav>
             <div class = logo>
                 <a href=#><h1>Edible Trails</h1></a>
             </div>
@@ -31,24 +33,41 @@
             </div>
         </nav>
         
-        <p>Find your favorite genres of food via zip code radius!</p>
+        <p>Find your favorite genres of food via zip code radius!</p> -->
     </header>
 
     
 
 <main>
   <!-- Search bar  -->
-
     
         <div id = left>
             <section>
 
-                <h4>Choose your State/Park:</h4>
+                <h4><span id= textBackground>Picnic Planner List:</span></h4>
+
+                <div class="container">
+                    <div class="myTodo">
+                        <div class="inputvalue">
+                            <input class="inputVal" type="text" placeholder="Add your task" value="">
+                            <button class="btn">Add Food</button>
+                        </div>
+                
+                
+                        <div class="todoLists">
+                
+                        </div>
+                        <!-- <button class="clearTask" onclick="clearTask()">Clear all Task</button> -->
+                    </div>
+                </div>
+
+
+                <h4><span id= textBackground>Choose your State/Park:</span></h4>
 
                <!-- <input type= text id = area name= area placeholder="Enter City or ZipCode">
                 <button id= "submitArea" class = "btn"><span class= "bi bi-search"></span>Search</button>
               <button class= "btn" id ="find-me">Where am I?</button> -->
-              <select id= "selectState">
+              <select id= "selectState" data-dropup-auto="false">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -108,6 +127,8 @@
                     <a id = "map-link" target="_blank"></a>
             
             </section>
+
+            
             <!--
             <ul>
                 <li></li>
@@ -123,50 +144,51 @@
         <div id = right>
             <!-- Map (google api) -->
             <section>
-                <h2>Park Location Map</h2>
+                <h2><span id= textBackground>Park Location Map:</span></h2>
                 <div id="map"></div>
                     
             </section>
 
             <!-- Top Results -->
-            <h2>Top Results</h2>
+            <h2><span id= textBackground>Top Results</span></h2>
             <section id=topResults>
                 <div class=card id="result1">
                     <h3>Ramsey Cascades - Great Smokey Mt National Park</h3>
-                    <img src="" alt="Restaurant Picture 1">
+                    <img class="parkPics" src="https://www.nps.gov/grsm/planyourvisit/images/ramsey.jpg?maxwidth=650&autorotate=false" alt="Restaurant Picture 1">
                     <dl>
-                        <a href="https://hikinginthesmokys.com/ramsey-cascades/">Ramsey Website</a>
+                        <a href="https://hikinginthesmokys.com/ramsey-cascades/">Ramsey Cascades Website</a>
                     </dl>
                 </div>
                 <div class=card id="result2">
-                    <h3>The Narrows - Zion National</h3>
-                    <img src="https://commons.wikimedia.org/wiki/File:Zion_Narrows.jpg#/media/File:Zion_Narrows.jpg"
+                    <h3>The Narrows - Zion National Park</h3>
+                    <img class="parkPics" src= "https://www.nps.gov/zion/planyourvisit/images/Narrows-hiker-in-water4.jpg?maxwidth=1200&maxheight=1200&autorotate=false"
                         alt="Restaurant Picture 1">
                     <dl>
-                        <a href="https://www.nps.gov/zion/planyourvisit/narrowspermits.htm"></a>
+                        <a href="https://www.nps.gov/zion/planyourvisit/narrowspermits.htm">Zion National Website</a>
                     </dl>
                 </div>
                 <div class=card id="result3">
                     <h3>Bright Angel Trail - Grand Canyon National Park</h3>
-                    <img src="" alt="Restaurant Picture 1">
+                    <img class="parkPics" src="https://www.nps.gov/common/uploads/cropped_image/primary/3CF1FA2F-F5C3-E839-3CE0746FFE55B295.jpg?width=1600&quality=90&mode=crop" alt="Restaurant Picture 1">
                     <dl>
-                        <dt>address: </dt>
-                        <a href="https://www.nps.gov/grca/planyourvisit/upload/brightangeltrail.pdf"></a>
+                        <!-- <dt>address: </dt> -->
+                        <a href="https://www.nps.gov/grca/planyourvisit/upload/brightangeltrail.pdf">Grand Canyon Website</a>
                     </dl>
                 </div>
                 <div class=card id="result4">
                     <h3>Upper Geyser - Yellowstone National Park</h3>
-                    <img src="https://www.tripadvisor.com/Attraction_Review-g60999-d126748-Reviews-Upper_Geyser_Basin-Yellowstone_National_Park_Wyoming.html#/media-atf/126748/42758848:p/?albumid=-160&type=0&category=-160"
+                    <img class="parkPics" src="https://www.nps.gov/features/yell/ofvec/exhibits/treasures/images/UGB1.jpg"
                         alt="Restaurant Picture 1">
                     <dl>
-                        <dt>address: </dt>
+                        <!-- <dt>address: </dt> -->
                         <a
-                            href="https://www.nps.gov/gis/storymaps/cascade/v1/index.html?appid=c9cd98a8f23c46748fbc7ebf714f03a4"></a>
+                            href="https://www.nps.gov/gis/storymaps/cascade/v1/index.html?appid=c9cd98a8f23c46748fbc7ebf714f03a4">Yellowstone Website</a>
                     </dl>
                 </div>
             </section>
             </div>
 
+            
 
 
 
@@ -180,6 +202,8 @@
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHXkB1ZGsu6wrnXWJ7nFPjel9MDTbh1z4&callback=initMap&libraries=places&v=weekly"async>
     </script>
+
+    <h5>Nathaniel Gordon - Key Compton Jr - Michael Feldman - Younggi Lee</h5>
     </body>
     
 

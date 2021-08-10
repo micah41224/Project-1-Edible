@@ -87,7 +87,7 @@ img {
 
 .container {
   width: 350px;
-  height: 400px;
+  height: 500px;
   background: #331db1c7;
   /* position: absolute; */
   top: 20%;
@@ -137,6 +137,7 @@ img {
   height: 40px;
   border-radius: 5px;
   margin-right: 5px;
+  margin-top: 10px;
 
   border: 2px solid rgb(69, 5, 187);
 }
@@ -148,6 +149,7 @@ img {
   font-weight: bold;
   outline-style: none;
   border-radius: 5px;
+  margin-top: 10px;
   box-shadow: 1px 1px #03110c;
 }
 
@@ -165,4 +167,16 @@ img {
 .parkPics {
   width: 200px;
   height: 200px;
+}
+
+select {
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  background-color: white;
+  border-top: black solid 5px;
+  padding: 10px;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edible Foods</title>
+    <title>Edible Trails</title>
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet"  type="text/css" href="style.css">
@@ -16,7 +16,7 @@
     <header>
         <nav>
             <div class = logo>
-                <a href=#><h1>Edible Foods</h1></a>
+                <a href=#><h1>Edible Trails</h1></a>
             </div>
             <div class= bar-container>
                 <div class = menu>
@@ -42,21 +42,80 @@
     
         <div id = left>
             <section>
-                <h4>Where do you go?</h4>
-                <input type= text id = area name= area placeholder="Enter City or ZipCode">
+
+                <h4>Choose your State/Park:</h4>
+
+               <!-- <input type= text id = area name= area placeholder="Enter City or ZipCode">
                 <button id= "submitArea" class = "btn"><span class= "bi bi-search"></span>Search</button>
-                <button class= "btn" id ="find-me">Where am I?</button>
+              <button class= "btn" id ="find-me">Where am I?</button> -->
+              <select id= "selectState">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+
+            <div id="selectCampGround"></div>
+
                     <p id = "status"></p>
                     <a id = "map-link" target="_blank"></a>
             
             </section>
+            <!--
             <ul>
-                <li>Atlanta</li>
-                <li>Chicago</li>
-                <li>New York</li>
+                <li></li>
+                <li></li>
+                <li></li>
 
             </ul>
-
+        -->
         </div>
         <!--search history-->
         
@@ -64,46 +123,49 @@
         <div id = right>
             <!-- Map (google api) -->
             <section>
-                <h2>Edible Foods</h2>
+                <h2>Park Location Map</h2>
                 <div id="map"></div>
                     
             </section>
 
             <!-- Top Results -->
             <h2>Top Results</h2>
-            <section id= topResults>
-                <div class = card id="result1">
-                    <h3>pizza hut</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
+            <section id=topResults>
+                <div class=card id="result1">
+                    <h3>Ramsey Cascades - Great Smokey Mt National Park</h3>
+                    <img src="" alt="Restaurant Picture 1">
                     <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
+                        <a href="https://hikinginthesmokys.com/ramsey-cascades/">Ramsey Website</a>
                     </dl>
                 </div>
-                <div class = card  id="result2"><h3>Mc's pizza</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
+                <div class=card id="result2">
+                    <h3>The Narrows - Zion National</h3>
+                    <img src="https://commons.wikimedia.org/wiki/File:Zion_Narrows.jpg#/media/File:Zion_Narrows.jpg"
+                        alt="Restaurant Picture 1">
                     <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
-                    </dl></div>
-                <div class = card  id="result3">
-                    <h3>TX Stake house</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
-                    <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
+                        <a href="https://www.nps.gov/zion/planyourvisit/narrowspermits.htm"></a>
                     </dl>
                 </div>
-                <div class = card  id="result4">
-                    <h3>MAMA's breakfast</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
+                <div class=card id="result3">
+                    <h3>Bright Angel Trail - Grand Canyon National Park</h3>
+                    <img src="" alt="Restaurant Picture 1">
                     <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
+                        <dt>address: </dt>
+                        <a href="https://www.nps.gov/grca/planyourvisit/upload/brightangeltrail.pdf"></a>
+                    </dl>
+                </div>
+                <div class=card id="result4">
+                    <h3>Upper Geyser - Yellowstone National Park</h3>
+                    <img src="https://www.tripadvisor.com/Attraction_Review-g60999-d126748-Reviews-Upper_Geyser_Basin-Yellowstone_National_Park_Wyoming.html#/media-atf/126748/42758848:p/?albumid=-160&type=0&category=-160"
+                        alt="Restaurant Picture 1">
+                    <dl>
+                        <dt>address: </dt>
+                        <a
+                            href="https://www.nps.gov/gis/storymaps/cascade/v1/index.html?appid=c9cd98a8f23c46748fbc7ebf714f03a4"></a>
                     </dl>
                 </div>
             </section>
-        </div>
+            </div>
 
 
 

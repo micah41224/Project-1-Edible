@@ -5,6 +5,8 @@ header {
   background: white;
   padding-top: auto;
   padding-bottom: 5px;
+  padding-left: 20px;
+  border: black 2px solid;
 }
 body {
   background: rgb(32, 141, 214);
@@ -177,6 +179,6 @@ select {
 footer {
   text-align: center;
   background-color: white;
-  border-top: black solid 5px;
+  border-top: black solid 2px;
   padding: 10px;
 }

@@ -69,12 +69,13 @@
                 </div>
 
 
-                <h4><span id= textBackground class = "flow-text">Choose your State/Park:</span></h4>
+                <h4><span id= textBackground class = "flow-text statePark">Choose your State/Park:</span></h4>
 
                <!-- <input type= text id = area name= area placeholder="Enter City or ZipCode">
                 <button id= "submitArea" class = "btn"><span class= "bi bi-search"></span>Search</button>
               <button class= "btn" id ="find-me">Where am I?</button> -->
-              <select id= "selectState" data-dropup-auto="false">
+              <select class="space-top" id= "selectState" data-dropup-auto="false">
+                <option value="" disabled selected>Choose your option</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -128,26 +129,27 @@
                 <option value="WY">Wyoming</option>
             </select>
 
-            <div id="selectCampGround"></div>
+                <div id="selectCampGround"></div>
 
                     <p id = "status"></p>
                     <a id = "map-link" target="_blank"></a>
             
             </section>
+        </div>
 
         
 
         <div id = right>
             <!-- Map (google api) -->
-            <section class="col s12 m8 l9">
+            <section class="col s12 m8 l9 spacer">
                 <h4><span id= textBackground>Park Location Map:</span></h4>
                 <div id="map"></div>
                     
             </section>
 
             <!-- Top Results -->
-            <h4><span id= textBackground>Featured Parks:</span></h4>
-            <section id=topResults>
+            <h4><span id="textBackground" class="featuredParks"> Featured Parks:</span></h4>
+            <section id="topResults" class="space-top">
                 <div class="card-panel lighten-5 z-depth-5 card " id="result1">
                     <h3 class = "flow-text">Ramsey Cascades - Great Smokey Mt National Park</h3>
                     <img class="parkPics" src="https://www.nps.gov/grsm/planyourvisit/images/ramsey.jpg?maxwidth=650&autorotate=false" alt="Restaurant Picture 1">

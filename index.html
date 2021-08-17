@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edible Foods</title>
+    <title>Edible Trails</title>
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet"  type="text/css" href="style.css">
 
 </head>
@@ -13,104 +17,186 @@
 <body>
     
     <header>
-        <nav>
-            <div class = logo>
-                <a href=#><h1>Edible Foods</h1></a>
-            </div>
-            <div class= bar-container>
-                <div class = menu>
-                    <a class= bar href>  find   </a>
+        <div class="grid-example header">
+            <h1 id= headerH1 class="flow-text">Edible Parks</h1>
+            <!-- <nav>
+                <div class = logo>
+                    <a href=#><h1>Edible Trails</h1></a>
                 </div>
-                <div class = menu>
-                    <a class= bar href>  the   </a>
+                <div class= bar-container>
+                    <div class = menu>
+                        <a class= bar href>  find   </a>
+                    </div>
+                    <div class = menu>
+                        <a class= bar href>  the   </a>
+                    </div>
+                    <div class = menu>
+                        <a class= bar href>  Wally  </a>
+                    </div>
                 </div>
-                <div class = menu>
-                    <a class= bar href>  Wally  </a>
-                </div>
-            </div>
-        </nav>
-        
-        <p>Find your favorite genres of food via zip code radius!</p>
+            </nav>
+            
+            <p>Find your favorite genres of food via zip code radius!</p> -->
+        </div>
     </header>
 
     
 
 <main>
   <!-- Search bar  -->
-    
-        <div id = left>
-            <section>
-                <h4>Where do you go?</h4>
-                <input type= text id = area name= area placeholder="Enter City or ZipCode">
+    <div class = "row">
+        <div id = left >
+            <section class="col s12 m4 l3">
+
+                <h4><span id= textBackground class = "flow-text">Picnic Planner List:</span></h4>
+
+                <div class="containers">
+                    <div class="myTodo">
+                        <div class="inputvalue">
+                            <input class="inputVal input-text" type="text" placeholder="Add deliciousness..." value="">
+                            <a class="btn btn-floating waves-effect waves-light red">
+                                <i class="material-icons">send</i>
+                            </a>
+                            
+                        </div>
+                
+                
+                        <div class="todoLists">
+                
+                        </div>
+                        <!-- <button class="clearTask" onclick="clearTask()">Clear all Task</button> -->
+                    </div>
+                </div>
+
+
+                <h4><span id= textBackground class = "flow-text">Choose your State/Park:</span></h4>
+
+               <!-- <input type= text id = area name= area placeholder="Enter City or ZipCode">
                 <button id= "submitArea" class = "btn"><span class= "bi bi-search"></span>Search</button>
-                <button class= btn id =location>Where am I?</button>
+              <button class= "btn" id ="find-me">Where am I?</button> -->
+              <select id= "selectState" data-dropup-auto="false">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+
+            <div id="selectCampGround"></div>
+
+                    <p id = "status"></p>
+                    <a id = "map-link" target="_blank"></a>
             
             </section>
-            <ul>
-                <li>Atlanta</li>
-                <li>Chicago</li>
-                <li>New York</li>
 
-            </ul>
-
-        </div>
-        <!--search history-->
         
 
         <div id = right>
             <!-- Map (google api) -->
-            <section>
-                <h2>Edible Foods</h2>
-                <img src = "Map.jpg" alt ="map"
+            <section class="col s12 m8 l9">
+                <h4><span id= textBackground>Park Location Map:</span></h4>
+                <div id="map"></div>
+                    
             </section>
 
             <!-- Top Results -->
-            <h2>Top Results</h2>
-            <section id= topResults>
-                <div class = card id="result1">
-                    <h3>pizza hut</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
+            <h4><span id= textBackground>Featured Parks:</span></h4>
+            <section id=topResults>
+                <div class="card-panel lighten-5 z-depth-5 card " id="result1">
+                    <h3 class = "flow-text">Ramsey Cascades - Great Smokey Mt National Park</h3>
+                    <img class="parkPics" src="https://www.nps.gov/grsm/planyourvisit/images/ramsey.jpg?maxwidth=650&autorotate=false" alt="Restaurant Picture 1">
                     <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
+                        <a href="https://hikinginthesmokys.com/ramsey-cascades/">Ramsey Cascades Website</a>
                     </dl>
                 </div>
-                <div class = card  id="result2"><h3>Mc's pizza</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
+                <div class="card-panel lighten-5 z-depth-5 card " id="result2">
+                    <h3 class = "flow-text">The Narrows - Zion National Park</h3>
+                    <img class="parkPics" src= "https://www.nps.gov/zion/planyourvisit/images/Narrows-hiker-in-water4.jpg?maxwidth=1200&maxheight=1200&autorotate=false"
+                        alt="Restaurant Picture 1">
                     <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
-                    </dl></div>
-                <div class = card  id="result3">
-                    <h3>TX Stake house</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
-                    <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
+                        <a href="https://www.nps.gov/zion/planyourvisit/narrowspermits.htm">Zion National Website</a>
                     </dl>
                 </div>
-                <div class = card  id="result4">
-                    <h3>MAMA's breakfast</h3>
-                    <img src= "" alt = "Restaurant Picture 1">
+                <div class="card-panel lighten-5 z-depth-5 card" id="result3">
+                    <h3 class = "flow-text">Bright Angel Trail - Grand Canyon National Park</h3>
+                    <img class="parkPics" src="https://www.nps.gov/common/uploads/cropped_image/primary/3CF1FA2F-F5C3-E839-3CE0746FFE55B295.jpg?width=1600&quality=90&mode=crop" alt="Restaurant Picture 1">
                     <dl>
-                        <dt>tel: (333)333-1112</dt>
-                        <dt>address: 12 34ST NW, Atlanta, GA </dt>
+                        <a href="https://www.nps.gov/grca/planyourvisit/upload/brightangeltrail.pdf">Grand Canyon Website</a>
                     </dl>
                 </div>
+                <div class="card-panel lighten-5 z-depth-5 card" id="result4">
+                    <h3 class = "flow-text">Upper Geyser - Yellowstone National Park</h3>
+                    <img class="parkPics" src="https://www.nps.gov/features/yell/ofvec/exhibits/treasures/images/UGB1.jpg"
+                        alt="Restaurant Picture 1">
+                    <dl>
+                        <a
+                            href="https://www.nps.gov/gis/storymaps/cascade/v1/index.html?appid=c9cd98a8f23c46748fbc7ebf714f03a4">Yellowstone Website</a>
+                    </dl>
+                </div>
+            
             </section>
         </div>
-
-
-
-
-
+    </div>
     </main>
-
-    </body>
     <footer>
-
+        <div class="container">
+            <div class="row">
+              <div class="col s12 m12">
+        Nathaniel Gordon   -   Key Compton Jr   -   Michael Feldman   -   Younggi Lee
+              </div>
+            </div>
+        </div>
     </footer>
-
-    <script src=""></script>
-
+    
+    <script src="./script.js" defer></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHXkB1ZGsu6wrnXWJ7nFPjel9MDTbh1z4&callback=initMap&libraries=places&v=weekly"async>
+    </script>
+    </body>
 </html>

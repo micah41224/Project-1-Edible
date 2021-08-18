@@ -5,15 +5,12 @@
 .spacer {
   padding-bottom: 3em !important;
 }
-header{
-  
+header {
   background: white;
 }
 .header {
-  
   padding-left: 20px;
   border: black 2px solid;
-  
 }
 body {
   background: rgb(32, 141, 214);
@@ -73,24 +70,20 @@ img {
   -webkit-filter: grayscale(100%) blur(3px);
   filter: grayscale(100%) blur(3px);
 }
-input {
-  color: #ffffff;
-}
+/* 
 .border {
 }
 .btn {
-}
+} */
 .card {
   border: black;
   background: cornsilk;
   margin: 10px;
   padding: 10px;
-  
 }
 #topResults {
-  display:flex;
+  display: flex;
   flex: 4;
-  
 }
 
 #map {
@@ -147,8 +140,7 @@ input {
 .pText {
   background: #ffffff;
   text-transform: capitalize;
-  margin:0 0;
-  
+  margin: 0 0;
 }
 .inputvalue {
   display: flex;
@@ -200,44 +192,44 @@ select {
 }
 
 @media (max-width: 1865px) {
-    select, #selectCampGround {
-      min-width: 299px;
-      width: 100%;
+  select,
+  #selectCampGround {
+    min-width: 299px;
+    width: 100%;
   }
-
 }
 
 /* Begin Mobile Responsiveness */
 @media (max-width: 1700px) {
-  
-    section {
-      width: 100% !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  section {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #headerH1 {
     text-align: center;
-}
+  }
 
   .containers {
     min-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-h4, .flow-text {
-  font-size: 2.28rem !important;
-  line-height: 110%;
-  margin: 2.52rem 0 .912rem 0;
-  text-align: center;
-}
+  h4,
+  .flow-text {
+    font-size: 2.28rem !important;
+    line-height: 110%;
+    margin: 2.52rem 0 0.912rem 0;
+    text-align: center;
+  }
 
-    #map {
-      min-width: 600px;
+  #map {
+    min-width: 600px;
   }
 
   .card {
@@ -251,13 +243,12 @@ h4, .flow-text {
 
   .featuredParks {
     margin: 6em;
-} 
+  }
 
-.row {
-  margin-bottom: 0px;
-  padding: 1em;
-}
-
+  .row {
+    margin-bottom: 0px;
+    padding: 1em;
+  }
 }
 
 @media (max-width: 1245px) {
@@ -271,24 +262,19 @@ h4, .flow-text {
   }
 }
 
-@media (max-width: 768px) { 
-
-
+@media (max-width: 768px) {
   .containers {
-    min-width:500px;
-}
+    min-width: 500px;
+  }
 
-    #map {
-      min-width:500px;
+  #map {
+    min-width: 500px;
   }
 
   .card {
-    min-width:500px;
+    min-width: 500px;
   }
-
 }
-
-
 
 footer {
   margin-top: 2em;
@@ -298,10 +284,11 @@ footer {
   padding: 10px;
 }
 @media screen and (max-width: 600px) {
- #topResults {display:flex;
+  #topResults {
+    display: flex;
     flex-wrap: wrap;
   }
-  .card{
-    width: 362px;}
-
+  .card {
+    width: 362px;
+  }
 }

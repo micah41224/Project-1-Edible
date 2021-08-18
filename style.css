@@ -1,10 +1,14 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.spacer {
+  padding-bottom: 3em !important;
+}
 header {
   background: white;
-  padding-top: auto;
-  padding-bottom: 5px;
+}
+.header {
   padding-left: 20px;
   border: black 2px solid;
 }
@@ -66,11 +70,11 @@ img {
   -webkit-filter: grayscale(100%) blur(3px);
   filter: grayscale(100%) blur(3px);
 }
-
+/* 
 .border {
 }
 .btn {
-}
+} */
 .card {
   border: black;
   background: cornsilk;
@@ -79,21 +83,29 @@ img {
 }
 #topResults {
   display: flex;
+  flex: 4;
 }
 
 #map {
   height: 500px;
+  margin-top: 3em;
+}
+
+.space-top {
+  margin-top: 2em;
 }
 
 /* Test Section */
 
-.container {
+.containers {
   width: 350px;
   height: 500px;
   background: #331db1c7;
   /* position: absolute; */
   top: 20%;
-  left: 30%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 0px;
   border-radius: 10px;
 }
 
@@ -128,6 +140,7 @@ img {
 .pText {
   background: #ffffff;
   text-transform: capitalize;
+  margin: 0 0;
 }
 .inputvalue {
   display: flex;
@@ -143,7 +156,7 @@ img {
 
   border: 2px solid rgb(69, 5, 187);
 }
-.btn {
+/*.btn {
   width: 100px;
   background: white;
   color: black;
@@ -153,7 +166,7 @@ img {
   border-radius: 5px;
   margin-top: 10px;
   box-shadow: 1px 1px #03110c;
-}
+}*/
 
 #headerH1 {
   font-weight: bolder;
@@ -174,11 +187,108 @@ img {
 select {
   height: 40px;
   margin-bottom: 15px;
+  display: block;
+  width: 70%;
+}
+
+@media (max-width: 1865px) {
+  select,
+  #selectCampGround {
+    min-width: 299px;
+    width: 100%;
+  }
+}
+
+/* Begin Mobile Responsiveness */
+@media (max-width: 1700px) {
+  section {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #headerH1 {
+    text-align: center;
+  }
+
+  .containers {
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4,
+  .flow-text {
+    font-size: 2.28rem !important;
+    line-height: 110%;
+    margin: 2.52rem 0 0.912rem 0;
+    text-align: center;
+  }
+
+  #map {
+    min-width: 600px;
+  }
+
+  .card {
+    min-width: 600px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featuredParks {
+    margin: 6em;
+  }
+
+  .row {
+    margin-bottom: 0px;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 1245px) {
+  .featuredParks {
+    margin: 5.3em;
+  }
+}
+@media (max-width: 668px) {
+  .featuredParks {
+    margin: 5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .containers {
+    min-width: 500px;
+  }
+
+  #map {
+    min-width: 500px;
+  }
+
+  .card {
+    min-width: 500px;
+  }
 }
 
 footer {
+  margin-top: 2em;
   text-align: center;
   background-color: white;
   border-top: black solid 2px;
   padding: 10px;
+}
+@media screen and (max-width: 600px) {
+  #topResults {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 362px;
+  }
 }
